@@ -1,0 +1,1 @@
+﻿namespace EsPar { class Program { static void Main(string[] args) { System.Random a=new System.Random();System.Console.WriteLine(P(4)); System.Console.ReadKey(); } public static bool P(int w) { return w % 2 == 0; } } }
