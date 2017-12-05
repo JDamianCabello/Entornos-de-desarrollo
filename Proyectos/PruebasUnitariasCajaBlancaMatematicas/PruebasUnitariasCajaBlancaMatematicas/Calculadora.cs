@@ -61,7 +61,7 @@ namespace PruebasUnitariasCajaBlancaMatematicas
             return true;
         }
 
-        public String CalcularDC(String entrada)
+        public static String CalcularDC(String entrada)
         {
             string resultado;
             int[] multiplicador = { 4, 8, 5, 10, 9, 7, 3, 6, 0, 0, 1, 2, 4, 8, 5, 10, 9, 7, 3, 6 };

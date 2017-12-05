@@ -125,5 +125,23 @@ namespace PruebaUnitariaCajaBlancaMatematicasTEST
             Calculadora.EsPrimo(valores);
         }
 
+        //Pruebas unitarias del método de cálculo del dígito de control.
+        [TestMethod]
+        public void C1_CalcularDC_12335678000012335678()
+        {
+            string valor = "12335678000012335678";
+            string resultado = Calculadora.CalcularDC(valor);
+
+            Assert.AreEqual("11", resultado);
+        }
+
+        [TestMethod]
+        public void C2_CalcularDC_12345678001234567890()
+        {
+            string valor = "12345678001234567890";
+            string resultado = Calculadora.CalcularDC(valor);
+
+            Assert.AreEqual("11", resultado);
+        }
     }
 }
