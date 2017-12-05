@@ -61,5 +61,35 @@ namespace PruebasUnitariasCajaBlancaMatematicas
             return true;
         }
 
+        public String CalcularDC(String entrada)
+        {
+            string resultado;
+            int[] multiplicador = { 4, 8, 5, 10, 9, 7, 3, 6, 0, 0, 1, 2, 4, 8, 5, 10, 9, 7, 3, 6 };
+
+            int acumulador1 = 0, acumulador2 = 0, resuParcial = 0;
+
+            for(int i = 0; i < 10; i++)
+            {
+                acumulador1 += multiplicador[i] * int.Parse(entrada.Substring(i,1));
+                acumulador2 += multiplicador[i + 10] + int.Parse(entrada.Substring(1 + 10, 1));
+            }
+
+            //Calcular primer DC
+            resuParcial = 11 - (acumulador1 % 11);
+            if(resuParcial == 10)
+                resultado = "1";
+            else
+                resultado = resuParcial.ToString();
+
+            //Calcular segundo DC
+            resuParcial = 11 - (acumulador2 % 11);
+            if(resuParcial == 10)
+                resultado += "1";
+            else
+                resultado += resuParcial.ToString();
+
+            return resultado;
+        }
+
     }
 }
