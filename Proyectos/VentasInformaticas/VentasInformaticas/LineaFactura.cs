@@ -31,5 +31,24 @@ namespace VentasInformaticas
                     _producto = value;
             }
         }
+
+        public double CalcularTasa()
+        {
+            double valorLinea = 0;
+
+            switch(this.Producto.Tipo)
+            {
+                case TipoProducto.HARDWARE:
+                    valorLinea = this.Producto.Precio * this.Cantidad * (1 + Constantes.IVAREDUCIDO);
+                    break;
+                case TipoProducto.SOFTWARE:
+                    valorLinea = this.Producto.Precio * this.Cantidad * (1 + Constantes.IVANORMAL);
+                    break;
+                case TipoProducto.NOAPLICA: //No lleva cargo adicional
+                    valorLinea = this.Producto.Precio * this.Cantidad;
+                    break;
+            }
+            return valorLinea;
+        }
     }
 }

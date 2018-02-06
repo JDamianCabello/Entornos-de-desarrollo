@@ -7,10 +7,9 @@ namespace VentasInformaticas
 {
     public class Producto
     {
-        public const int SOFTWARE = 2;
-        public const int HARDWARE = 1;
-        public const int NOAPLICA = 0;
         private string _nombre;
+        private double _precio;
+        private TipoProducto _tipo;
 
         #region Propiedades
 
@@ -19,16 +18,16 @@ namespace VentasInformaticas
             get { return _nombre; }
             set { _nombre = value; }
         }
-        private double _precio;
+
 
         public double Precio
         {
             get { return _precio; }
             set { _precio = value; }
         }
-        private int _tipo;
+        
 
-        public int Tipo
+        public TipoProducto Tipo
         {
             get { return _tipo; }
             set { _tipo = value; }
@@ -38,7 +37,7 @@ namespace VentasInformaticas
 
         #region Constructor
 
-        public Producto(string nombre, double precio, int tipo)
+        public Producto(string nombre, double precio, TipoProducto tipo)
         {
             this._nombre = nombre;
             this._precio = precio;

@@ -10,10 +10,10 @@ namespace VentasInformaticas
     {
         static void Main(string[] args)
         {
-            Producto p1 = new Producto("Pendrive 64Gb",25.00,1);
-            Producto p2 = new Producto("Disco SSD 512Gb", 80.00, 1);
-            Producto p3 = new Producto("Lisensia Ofiss profecioná", 20.00, 2);
-            Producto p4 = new Producto("Cambio pantalla smartphone", 50.00, 0);
+            Producto p1 = new Producto("Pendrive 64Gb", 25.00, TipoProducto.HARDWARE);
+            Producto p2 = new Producto("Disco SSD 512Gb", 80.00, TipoProducto.HARDWARE);
+            Producto p3 = new Producto("Lisensia Ofiss profecioná", 20.00, TipoProducto.SOFTWARE);
+            Producto p4 = new Producto("Cambio pantalla smartphone", 50.00, TipoProducto.NOAPLICA);
 
 
             Factura f1 = new Factura("100");

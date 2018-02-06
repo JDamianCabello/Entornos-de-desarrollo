@@ -39,22 +39,11 @@ namespace VentasInformaticas
             {
                 double valorCompra = 0;
 
-                switch(linea.Producto.Tipo)
-                {
-                    case Producto.HARDWARE:
-                        valorCompra = linea.Producto.Precio * linea.Cantidad * 1.05;
-                        break;
-                    case Producto.SOFTWARE:
-                        valorCompra = linea.Producto.Precio * linea.Cantidad * 1.21;
-                        break;
-                    case Producto.NOAPLICA: //No lleva cargo adicional
-                        valorCompra = linea.Producto.Precio * linea.Cantidad;
-                        break;
-                }
+                valorCompra = linea.CalcularTasa();
 
                 //Calcular bonificación por puntos
                 bonificacion++;
-                if(linea.Producto.Tipo == Producto.HARDWARE && linea.Cantidad > 1)
+                if(linea.Producto.Tipo == TipoProducto.HARDWARE && linea.Cantidad > 1)
                     bonificacion++;
 
                 totalFactura += valorCompra;
@@ -62,7 +51,7 @@ namespace VentasInformaticas
                 ticket += "\t" + linea.Producto.Nombre + "\t" + linea.Cantidad + "\t" + valorCompra + "\n";
             }
             ticket += "El total de su compra es: " + totalFactura.ToString() + "\n";
-            ticket += "En esta compra ha acumulado : " + bonificacion + "puntos\n";
+            ticket += "En esta compra ha acumulado : " + bonificacion + " puntos\n";
             return ticket;
         }
     }

@@ -3,8 +3,8 @@
   <Class Name="VentasInformaticas.LineaFactura">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAAAAAQAAAAAAAAgAAAAAAAIAAAAAAAAA=</HashCode>
-      <FileName>Compra.cs</FileName>
+      <HashCode>AAAAAAEAAAAAAAAAQAgAAAAAAgAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>LineaFactura.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Producto" />
@@ -16,11 +16,14 @@
       <HashCode>AAAAQAAAACAAAAAAAAAAAAAAAAIAAAAIAAAAAAABAAA=</HashCode>
       <FileName>Factura.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_cesta" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="VentasInformaticas.Producto">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACABAAAAAAAAAAAAgAAQAAABAAAAAACAAAIAAEQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAQAAABAAAAAAAAAAIAAEQ=</HashCode>
       <FileName>Producto.cs</FileName>
     </TypeIdentifier>
   </Class>
