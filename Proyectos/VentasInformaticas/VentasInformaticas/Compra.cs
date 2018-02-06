@@ -8,6 +8,13 @@ namespace VentasInformaticas
     public class LineaFactura
     {
         private int _cantidad;
+        private Producto _producto;
+
+        public int Cantidad
+        {
+            get { return _cantidad; }
+            set { _cantidad = value; }
+        }
 
         public LineaFactura(Producto producto, int cantidad)
         {
@@ -17,11 +24,11 @@ namespace VentasInformaticas
 
         public Producto Producto
         {
-            get { return Producto; }
+            get { return _producto; }
             set
             {
                 if(value != Producto)
-                    Producto = value;
+                    _producto = value;
             }
         }
     }
